@@ -1,10 +1,11 @@
 package com.example.qrgenerator
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -50,5 +51,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun scanner(view: View) {
+        val i = Intent(this , ScanActivity::class.java)
+        startActivity(i)
     }
 }
